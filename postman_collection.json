@@ -1261,6 +1261,137 @@
 			]
 		},
 		{
+			"name": "Trip Types",
+			"item": [
+				{
+					"name": "List Trip Types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/trip-types",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"trip-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Trip Type By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/trip-types/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"trip-types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Trip Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"trip_type\": \"One Way Transfer\",\n    \"trip_name\": \"Standard One Way\",\n    \"triptype_status\": \"Active\",\n    \"triptype_remarks\": \"Standard transfer between two locations\",\n    \"created_by\": \"1\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/trip-types",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"trip-types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trip Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"trip_type\": \"One Way Transfer\",\n    \"trip_name\": \"Updated Trip Type\",\n    \"triptype_status\": \"Active\",\n    \"triptype_remarks\": \"Updated remarks\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/trip-types/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"trip-types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Trip Type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{auth_token}}"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/trip-types/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"trip-types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Trip Owners",
 			"item": [
 				{

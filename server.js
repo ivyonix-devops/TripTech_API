@@ -11,10 +11,12 @@ import invitationRoutes from './routes/invitationRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
 import documentRoutes from './routes/documentRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js';
+import tripTypeRoutes from './routes/tripTypeRoutes.js';
 
 dotenv.config();
 
 const app = express();
+
 
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
@@ -30,6 +32,7 @@ app.use('/api/invites', invitationRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/documents', documentRoutes);
 app.use('/api/services', serviceRoutes);
+app.use('/api/trip-types', tripTypeRoutes);
 
 const PORT = process.env.PORT || 5000;
 
