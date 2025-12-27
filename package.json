@@ -2,8 +2,16 @@
   "name": "triptech_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "migrate": "node migrate.js",
+    "start:prod": "NODE_ENV=production pm2 start server.js --name triptech_api",
+    "stop:prod": "pm2 stop triptech_api",
+    "restart:prod": "pm2 restart triptech_api",
+    "delete:prod": "pm2 delete triptech_api",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

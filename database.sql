@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS users (
   password_hash VARCHAR(255) NOT NULL,
   full_name VARCHAR(255),
   phone VARCHAR(20),
+  address VARCHAR(255),
   company_name VARCHAR(255),
   role ENUM('logistics', 'owner', 'vendor', 'driver', 'admin') NOT NULL,
   status ENUM('Pending', 'Active', 'Inactive', 'Suspended') NOT NULL DEFAULT 'Pending',
